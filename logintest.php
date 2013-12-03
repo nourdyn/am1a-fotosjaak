@@ -12,9 +12,9 @@
 	foreach ( $result_array as $value)
 	{
 		echo "<tr>
-				<td>"$value->get_id()."<br>"</td>
-				<td>"$value->get_id()."<br>"</td>
-			  </tr>
+				<td>".$value->get_id()."<br>"</td>
+				<td>".$value->get_email()."<br>"</td>
+			  </tr>"
 	}
 	echo "</table>";
 ?>

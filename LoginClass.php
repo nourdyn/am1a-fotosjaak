@@ -11,6 +11,9 @@
 		private $activated;
 		private $activationdate;
 		
+		//properties
+		public function get_id() {return $this->id;}
+		
 		//constructor 
 		public function __construct()
 		{
