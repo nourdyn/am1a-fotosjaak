@@ -17,7 +17,7 @@ body
 
 div#container
 {
-	background-color:Grey;
+	background-color:grey;
 	width:745px;
 	margin:0px auto;
 	border-radius:25px;
@@ -52,7 +52,7 @@ div#link
 	position:absolute;
 	left:-120px;
 	background-color:grey;
-	border-radius:10px;
+	border-radius:20px;
 	padding:0.5em;
 }
 
@@ -78,7 +78,7 @@ table.simple  th, td
 	border:1px solid white;
 	text-align:center;
 	padding:0.3em;
-	background-color:White;
+	background-color:RGB(180,180,180);
 	color:black;
 }
 

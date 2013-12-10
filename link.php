@@ -2,6 +2,9 @@
 	<li>
 		<a href="index.php?content=homepage">home</a>
 	</li>
+	<li>
+		<a href="index.php?content=logintest">logintest</a>
+	</li>
 	<?php 
 		if (isset($_SESSION['userrole']))
 		{
@@ -20,15 +23,11 @@
 						  echo "<li>
 							<a href='index.php?content=faqpage'>faq</a>				
 						  </li>"; 
-						  
 				break;
 				case 'admin':
 				
 				break;
 				case 'root':
-				echo "<li>
-							<a href='index.php?content=help'>help</a>
-						  </li>";
 				
 				break;
 			}

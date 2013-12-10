@@ -43,7 +43,11 @@
 			}
 			return $object_array;
 			
-			
+			{
+				global $database;
+				$query = "SELECT *
+						  FROM `login`
+			}
 		}
 	}
 ?>
