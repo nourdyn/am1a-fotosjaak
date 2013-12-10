@@ -14,13 +14,19 @@
 			//Verwijs door naar de homepage van de geregistreerde gebruiker
 			//echo "Record bestaat in de database";
 			$user_object = LoginClass::find_user_by_email_password($_POST['email'],
-																   $_POST['password']);
+			
+			/* roep de static method find_user_by_email_password aan uit
+			 * de LoginClass. deze method geeft precies 1 loginclass-object terug.
+			 * je kunt via dit object de properties opvragen zoals:
+			 * get_id(), get_email(), get_password, enz.....
+			 */												   $_POST['password']);
+			//echo $user_object->get_id(); exit();
 			
 			$record = mysql_fetch_array($result);
-			$_SESSION['id'] = $record['id'];
-			$_SESSION['userrole'] = $record['userrole'];
+			$_SESSION['id'] = $user_object->get_id();
+			$_SESSION['userrole'] = $user_object->get_userrole();
 			
-			switch ($record['userrole'])
+			switch ($_SESSION['userrole'])
 			{
 				case 'root':
 					header("location:index.php?content=root_homepage");

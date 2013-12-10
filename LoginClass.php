@@ -47,6 +47,11 @@
 				global $database;
 				$query = "SELECT *
 						  FROM `login`
+						  WHERE `email` = '".$email."'
+						  AND `password` = '".$password."'";
+				//echo $query; exit();
+				$loginClassObjectInArray = self::find_by_sql($query);
+				return $loginClassObject = array_shift($loginClassObjectInArray);
 			}
 		}
 	}
