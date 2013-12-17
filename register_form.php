@@ -64,57 +64,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Burgerlijke staat: </td>
-		</tr>
-		<tr>
-			<td>
-			  <input type="radio" name="marital_status" value="married" required>Getrouwd<br>
-			  <input type="radio" name="marital_status" value="single" required>Niet getrouwd
-			</td>
-		</tr>
-		<tr>
-			<td>Favoriete game genre: </td>
-		</tr>
-		<tr>
-			<td>
-				<select name="favo_genre">
-					<option value='not_selected'>---</option>
-					<option value='rpg'>rpg</option>
-					<option value='adventure'>adventure</option>
-					<option value='horror'>horror</option>
-					<option value='shooter'>shooter</option>
-					<option value='mmorpg'>mmorpg</option>
-					<option value='casual'>casual</option>
-					<option value='educational'>educational</option>
-					<option value='sport'>sport</option>
-					<option value='simulation'>simulation</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>Favoriete game</td>
-		</tr>
-		<tr>				
-			<td>
-				<input type='text' name='favo_game' />
-			</td>
-		</tr>
-		<tr>
 			<td>email</td>
 		</tr>
 		<tr>				
 			<td>
 				<input type='email' name='email' />
 			</td>
-		</tr>
-		<tr>
-			<td>password</td>
-		</tr>
-		<tr>				
-			<td>
-				<input type='password' name='password' />
-			</td>
-		</tr>
+		</tr>		
 		<tr>
 			<td><input type="submit" name="submit" value="verstuur" /></td>
 		</tr>

@@ -112,9 +112,58 @@
 					  FROM `login`
 					  WHERE `email` = '".$email."'
 					  AND `password` = '".$password."'";
+			//echo $query; exit();
 			$loginClassObjectInArray = self::find_by_sql($query);	
-			$loginClassObject = array_shift($loginClassObjectInArray);
-			return $loginClassObject;
+			return $loginClassObject = array_shift($loginClassObjectInArray);
 		}
+		
+		public static function check_if_account_is_activated($email,
+															 $password)
+		{
+			// Maak een query die het record selecteerd van degene die
+			// inlogd
+			$query = "SELECT	*
+					  FROM		`login`
+					  WHERE		`email`		=	'".$email."'
+					  AND		`password`	=	'".$password."'";
+				
+			// Vuur de query af op de database met de static method
+			// find_by_sql($query)
+			$object_array = self::find_by_sql($query);
+			$loginClassObject = array_shift($object_array);
+			if ( $loginClassObject->activated == 'yes')
+			{
+				return true;
+			}
+			else 
+			{
+				return false;
+			}
+		}	
+		
+		public static function check_if_email_exists()
+		
+		{
+			global $database;
+			
+			$query = "SELECT	* 
+						FROM	`login`
+						WHERE	`email` = '".$email."";
+			$result = $database->fire_query($query);
+			if (mysql_num_rows($result) > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+				
+			}
+			// ternary operator
+			return (mysql_num_rows($result) > 0) ? true : false;
+			
+			return false;
+		}												 
+													
 	}
 ?>
